@@ -16,11 +16,12 @@ alphabet = ['a', 'b', 'c', 'd', 'e',
 def rot13(str):
     str_list = list(str)
     for i in xrange(len(str_list)):
-        char_index = alphabet.index(str_list[i])
-        new_index = char_index + 13
-        if new_index > 25:
-            new_index -= 26
-        str_list[i] = alphabet[new_index]
+        if str_list[i] in alphabet:
+            char_index = alphabet.index(str_list[i])
+            new_index = char_index + 13
+            if new_index > 25:
+                new_index -= 26
+            str_list[i] = alphabet[new_index]
 
     return ''.join(str_list)
 
