@@ -2,15 +2,15 @@
 
 <html>
     <head>
-        <title>Udacity Templates!</title>
+        <title>Rot13!</title>
     </head>
 
-    <body style="margin: 0;">
-        <h1 style="background-color: #ddd; color: #888 margin: 0; height: 50px;">
-            Udacity Templates
-        </h1>
-
-        {% block content %}
-        {% endblock %}
+    <body>
+        <h2>Enter some text to ROT13:</h2>
+        <form method="post">
+            <textarea rows="8" cols="50" name="text">{{text}}</textarea>
+            <br>
+            <input type="submit">
+        </form>
     </body>
 </html>
